@@ -46,4 +46,12 @@ public class Main {
         }
     }
 
+    public static void filterByString(ArrayList<Task> tasksData, String filterString) {
+        for (Task t : tasksData) {
+            if (t.getDescription().contains(filterString)) {
+                System.out.println(t);
+            }
+        }
+    }
+
 }
