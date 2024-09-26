@@ -46,6 +46,14 @@ public class Main {
         }
     }
 
+    public static void filterByString(ArrayList<Task> tasksData, String filterString) {
+        for (Task t : tasksData) {
+            if (t.getDescription().contains(filterString)) {
+                System.out.println(t);
+            }
+        }
+    }
+
     public static void printDeadLinesStreams(ArrayList<Task> tasksData) {
         tasksData.stream()
                 .filter(task -> task instanceof Deadline)
