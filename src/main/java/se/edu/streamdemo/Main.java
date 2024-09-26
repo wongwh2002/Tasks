@@ -46,4 +46,9 @@ public class Main {
         }
     }
 
+    public static void printDeadLinesStreams(ArrayList<Task> tasksData) {
+        tasksData.stream()
+                .filter(task -> task instanceof Deadline)
+                .forEach(System.out::println);
+    }
 }
